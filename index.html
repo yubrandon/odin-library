@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="icon" href="book.svg">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Your Library</h1>
+        <button class="new-book">NEW BOOK</button>
+    </div>
+    <dialog class="modal" id="modal">
+        <div class="modal-form">
+            <div class="modal-header">
+                <h4>Add a New Book!</h4>
+            </div>
+            <form id="library-form">
+                <fieldset>
+                    <div class="form title-div">
+                        <input type="text" id="title" name="title" placeholder="Title" required>
+                    </div>
+                    <div class="form author-div">
+                        <input type="text" id="author" name="author" placeholder="Author" required>
+                    </div>
+                    <div class="form page-div">
+                        <input type="number" id="pages" name="pages" placeholder="Pages" required>
+                    </div>
+                    <div class="form read-div">
+                        <label for="read">Have you finished reading?</label>
+                        <input type="checkbox" id="read" name="read">
+                    </div>
+                    <div class="form notes-div">
+                        <textarea id="notes" placeholder="Write your notes here..."></textarea>
+                    </div>
+                    <div class="form-btn btn-div">
+                        <button id="submit" name="submit" class="submit">
+                            Add To Library</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </dialog>
+    <div class="container"></div>
+</body>
+</html>
