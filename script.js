@@ -64,7 +64,7 @@ function display() {
             //Call getIndex using list of sibling elements
             //getIndex will return array index of the toggled node
             let target = getIndex(node);
-
+            
             //Invert the read boolean of the node at the found index
             myLibrary[target].read = !myLibrary[target].read;
 
@@ -203,6 +203,7 @@ function getIndex(nodes) {
     let check = false;
     if(nodes[3].innerText == 'Completed') check = true;
     else check = false;
+
     //Loop through each array item
     for(let i=0;i<myLibrary.length;i++) {
         //For every array item, compare with siblings of target node
@@ -210,10 +211,10 @@ function getIndex(nodes) {
         myLibrary[i].author == nodes[1].innerText.slice(3) &&
         myLibrary[i].pages == nodes[2].innerText.slice(7) && 
         myLibrary[i].read == check && 
-        (myLibrary[i].notes == nodes[4].innerText)) {
+        myLibrary[i].notes == nodes[4].innerText) {
+            
             //If values match, we have found the index of the target node
             return i;
         }
-        else return;
     }
 }
