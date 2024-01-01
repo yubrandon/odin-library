@@ -60,7 +60,6 @@ function display() {
         read.addEventListener('click', () => {
             //Get all sibling elements
             let node = read.parentNode.childNodes;
-            console.log(node);
 
             //Call getIndex using list of sibling elements
             //getIndex will return array index of the toggled node
