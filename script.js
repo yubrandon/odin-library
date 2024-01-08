@@ -64,12 +64,13 @@ function display() {
             //Call getIndex using list of sibling elements
             //getIndex will return array index of the toggled node
             let target = getIndex(node);
+            console.log(target,myLibrary);
             
             //Invert the read boolean of the node at the found index
             myLibrary[target].read = !myLibrary[target].read;
 
             //Use changed boolean to change styling of target node
-            if(myLibrary[i].read == true) {
+            if(myLibrary[target].read == true) {
                 read.innerText = 'Completed';
                 read.style.backgroundColor = 'lightgreen';
             }
@@ -135,8 +136,8 @@ function clear() {
 }
 
 //Sample instantiation
-addBookToLibrary('hunger games','jk rowling',123,true,'cool');
-addBookToLibrary('harry potter','james patterson',999,false,'magical');
+addBookToLibrary('hunger games','jk rowling',123,false,'cool');
+addBookToLibrary('harry potter','james patterson',999,true,'magical');
 addBookToLibrary('harry potter2','james patterson II',10000,false,'crazy');
 display();
 
